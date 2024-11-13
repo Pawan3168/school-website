@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+/* Initial state for float-in animation */
+.intro-animate {
+  opacity: 0;
+  transform: translateX(-50px); /* Starts 50px to the left */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* When the element is in view */
+.intro-animate.visible {
+  opacity: 1;
+  transform: translateX(0); /* Moves to the original position */
+}
+.introduction-section {
+  width: 80vw;
+  height: auto;
+  margin: 0px auto;
+  text-align: center;
+  border-radius: 8px;
+  padding-top: 100px;
+}
+
+.introduction-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.introduction-text p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.image-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80vw;
+  max-width: 1200px;
+  margin: 80px auto;
+  justify-items: center;
+}
+
+.image-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  width: 80vw;
+  max-width: 1200px;
+  margin: 80px auto;
+  justify-items: center;
+}
+
+.image-item {
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0; /* Start hidden */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for animation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Left-Side Image: Slide in from the left */
+.image-item.left {
+  transform: translateX(-100px); /* Start 100px to the left */
+}
+
+.image-item.left.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+
+/* Top Image: Slide in from the top */
+.image-item.top {
+  transform: translateY(-100px); /* Start 100px above */
+}
+
+.image-item.top.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Bottom Image: Slide in from the bottom */
+.image-item.bottom {
+  transform: translateY(100px); /* Start 100px below */
+}
+
+.image-item.bottom.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Specific Sizes */
+.large {
+  grid-column: span 2; /* Span across 2 columns */
+  grid-row: span 2; /* Span across 2 rows */
+  height: 700px;
+  border-radius: 85px;
+}
+
+.small {
+  grid-column: span 1; /* Span across 1 column */
+  grid-row: span 1; /* Span across 1 row */
+  height: 350px;
+  border-radius: 50px;
+}
+
+.medium {
+  grid-column: span 2; /* Span across 2 columns */
+  grid-row: span 1; /* Span across 1 row */
+  height: 350px;
+  border-radius: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  }
+
+  .large {
+    height: 500px; /* Adjust large image height */
+  }
+
+  .small,
+  .medium {
+    height: 250px; /* Adjust small and medium image height */
+  }
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+
+  .large,
+  .medium,
+  .small {
+    height: auto;
+    border-radius: 30px;
+  }
+}

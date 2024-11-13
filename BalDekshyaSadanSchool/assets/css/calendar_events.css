@@ -1,0 +1,131 @@
+.blog-articles {
+  width: 100vw;
+  height: 80vh;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.blog-articles h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.calendar-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.calendar-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.calendar-container h2,
+.events-container h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Container for the event card */
+.event-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 50px 0;
+  width: 100%; /* Adjust as needed */
+  max-width: 700px;
+  transition: box-shadow 0.3s ease;
+  margin: 10px auto;
+}
+
+/* Add shadow effect on hover */
+.event-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.event-card-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+/* Content styling */
+.event-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff6f00;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+.event-description {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Read more link styling */
+.read-more-link {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #ff6f00;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+  color: #ff4500;
+}
+
+/* See More Button Container */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* See More Button Styling */
+.see-more-button {
+  padding: 10px 20px;
+  background-color: #ff6f00;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.see-more-button:hover {
+  background-color: #ff4500;
+}

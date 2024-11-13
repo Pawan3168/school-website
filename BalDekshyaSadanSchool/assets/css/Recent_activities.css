@@ -1,0 +1,115 @@
+.slider-container {
+  width: 80vw;
+  height: auto;
+  margin: 20px auto;
+  padding: 55px 0px;
+  border-radius: 8px;
+  justify-content: center; /* Center content */
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+/* Initial state for float-in animation */
+.intro-animate {
+  opacity: 0;
+  transform: translateX(-50px); /* Starts 50px to the left */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* When the element is in view */
+.intro-animate.visible {
+  opacity: 1;
+  transform: translateX(0); /* Moves to the original position */
+}
+
+.card-slider {
+  position: relative;
+  width: 80%; /* Adjust to fit your layout */
+  overflow: hidden;
+  padding: 20px 0; /* Add padding for better spacing */
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Ensure space between buttons and slider */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for the slider movement */
+  gap: 20px; /* Space between cards */
+  width: calc(50% * 12);
+}
+
+.card {
+  min-width: 25%; /* Maintain card size */
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  height: 350px; /* Maintain consistent height */
+}
+
+.card.visible {
+  opacity: 1; /* Show card */
+  transform: translateX(0); /* Move to original position when visible */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 15px;
+}
+
+.card p {
+  font-size: 1em;
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+/* Button Styling */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgb(254, 101, 0);
+  color: rgb(254, 101, 0);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms, color 250ms;
+  z-index: 10; /* Ensures the buttons are on top of other elements */
+}
+
+.slider-btn:hover {
+  background-color: rgb(254, 101, 0);
+  color: #fff;
+}
+
+.prev-btn {
+  left: 0px; /* Adjust space from the left */
+}
+
+.next-btn {
+  right: 0px; /* Adjust space from the right */
+}
+
+h2 {
+  margin-bottom: 2.5rem;
+  text-align: center; /* Center the heading */
+}

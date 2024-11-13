@@ -1,0 +1,61 @@
+.vision-section_third {
+  width: 80vw; /* Adjust width as needed */
+  height: 80vh;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space items evenly */
+  padding: 20px; /* Add padding around the section */
+  margin: 50px auto; /* Center the section horizontally with margin */
+  gap: 50px; /* Space between the two sections */
+}
+
+.image-content_third {
+  width: 50%; /* Adjust width as necessary */
+  position: relative; /* Positioning for the blob */
+  display: flex; /* Add flexbox to center the blob */
+  justify-content: center; /* Center the blob horizontally */
+}
+
+.blob-wrapper_third {
+  position: relative; /* Positioning for the blob */
+  width: 600px; /* Control the size of the blob */
+  height: 450px; /* Control the size of the blob */
+  overflow: visible; /* Allow overflow to ensure blob is visible */
+}
+
+.blob_third {
+  width: 100%; /* Set to 100% of the wrapper */
+  height: 100%; /* Set to 100% of the wrapper */
+  background-size: cover; /* Ensure the image covers the blob */
+  background-position: center; /* Center the image */
+  box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+  border-radius: 50%; /* Round the edges */
+  animation: blob-animation 5s ease-in-out infinite; /* Animation for the blob */
+  transition: all 1s ease-in-out; /* Smooth transition for interactions */
+}
+
+.text-content_third {
+  width: 45%; /* Adjust width for text content */
+}
+
+.text-content_third h2 {
+  font-size: 2em; /* Increase font size for the heading */
+  margin-bottom: 1rem; /* Space below heading */
+  color: #333; /* Darker color for the heading */
+}
+
+.text-content_third p {
+  font-size: 1em; /* Font size for paragraphs */
+  color: #666; /* Color for text */
+  margin-bottom: 1rem; /* Space below paragraphs */
+}
+
+@keyframes blob-animation {
+  0%,
+  100% {
+    border-radius: 50%; /* Start and end with a circular blob */
+  }
+  50% {
+    border-radius: 40% 60% 50% 50% / 50% 30% 70% 50%; /* Animate to a more organic shape */
+  }
+}

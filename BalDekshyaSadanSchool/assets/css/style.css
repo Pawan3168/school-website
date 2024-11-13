@@ -1,0 +1,117 @@
+/* Standard top and bottom padding for the navbar */
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent !important;
+  color: white;
+  /* Fully transparent background */
+  box-shadow: none; /* Remove shadow for clean transparent look */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+}
+
+/* Logo styling */
+.custom-logo {
+  margin-right: 10px; /* Space after the logo */
+}
+
+.logo {
+  height: 90px; /* Adjust the height as needed */
+}
+
+/* Add spacing between the navbar items */
+.custom-nav-items {
+  margin-left: 5px; /* Left margin for spacing */
+  margin-right: 15px; /* Right margin for spacing */
+}
+
+.custom-nav-link {
+  color: white;
+}
+.custom-nav-link:hover {
+  color: white;
+}
+
+/* Center the navbar content */
+.navbar-collapse {
+  justify-content: center; /* Center the items */
+}
+
+/* Hover effect for main navbar items */
+.custom-nav-items:hover {
+  background-color: steelblue; /* Background color on hover */
+  border: 1px solid transparent; /* Transparent border */
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+/* Show the dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown menu */
+}
+
+/* Style for dropdown menu */
+.dropdown-menu {
+  display: none; /* Hide the dropdown menu by default */
+  transition: all 0.3s ease; /* Add transition for dropdown */
+}
+.w-90 {
+  width: 90% !important;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item {
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: steelblue; /* Change to the desired hover color */
+  color: #000; /* Change text color on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Adjust navbar-brand padding to align with centered content */
+.navbar-brand {
+  padding-right: 5px; /* Adjust this value if needed */
+}
+
+/* navbar transparency effects on scroll*/
+/* Initial transparent state */
+.navbar.transparent {
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  transition: background-color 0.3s ease;
+}
+
+/* Logo size and transition */
+.navbar-brand img {
+  max-height: 60px; /* Default size */
+  transition: all 0.3s ease;
+}
+
+/* Transparent state when page loads */
+.navbar.transparent {
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Solid background on scroll */
+.navbar.solid {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ) !important; /* Semi-transparent white */
+  backdrop-filter: blur(5px); /* Add blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Change text color to black when navbar is scrolled and solid */
+.navbar.solid .custom-nav-link {
+  color: black;
+}
